@@ -10,5 +10,20 @@
  * @returns {String}
  */
 const firstNonRepeatedCharacter = function (string) {
-  // TODO: your solution here
+  var char=0
+    for(var i=0; i<string.length;i++){
+        for (var j=0;j<string.length; j++){
+            if(string[i].toUpperCase()===string[j].toUpperCase()){
+               char=char+1
+            }
+        }
+        if(char===1){
+            return string[i]
+        }
+        else {
+            char=0
+        }
+            }
+            return "char repeated"
+            // TODO: your solution here
 }
