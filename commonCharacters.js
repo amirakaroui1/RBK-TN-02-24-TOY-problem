@@ -18,4 +18,17 @@
 
  * Should return null or empty string of there is no commonCharacters
 
- *
+ */ 
+var commonCharacters =(string1,string2) =>{
+    var res =""
+    for(var i=0;i<string1.length;i++){
+        if(!string1 || !string2 ){
+            return ""
+        }
+        var char =string1[i]
+        if(string2.includes(char) && !res.includes(char)){
+         res = res+char
+        }
+    }
+return res
+} 
